@@ -12,7 +12,7 @@ with open('style.css') as f:
 
 @st.cache
 def get_data():
-    df = pd.read_csv('data/sales.csv')
+    df = pd.read_csv("https://raw.githubusercontent.com/digitalabdul/ecom-py-app/master/data/sales.csv")
     df['Year'] = pd.to_datetime(df['Invoice Date']).dt.year
     df['Month'] = pd.to_datetime(df['Invoice Date']).dt.month_name(locale='English')
 
