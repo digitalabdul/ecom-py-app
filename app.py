@@ -12,7 +12,7 @@ with open('style.css') as f:
 
 @st.cache
 def get_data():
-    df = pd.read_excel('sales.xlsx')
+    df = pd.read_excel('data/sales.xlsx')
     df['Year'] = pd.to_datetime(df['Invoice Date']).dt.year
     df['Month'] = pd.to_datetime(df['Invoice Date']).dt.month_name(locale='English')
 
